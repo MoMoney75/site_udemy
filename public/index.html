@@ -25,6 +25,9 @@
           <a href="#about">About</a>
           <a href="#journey">Journey</a>
           <a href="#portfolio">Portfolio</a>
+          <button type="button" class="nav-chat" id="nav-chat-open" aria-controls="chat-panel">
+            Digital twin
+          </button>
           <a href="#contact" class="btn-small">Connect</a>
         </div>
       </nav>
@@ -164,6 +167,56 @@
       </div>
     </footer>
 
+    <div class="chat-dock" id="chat-dock">
+      <button
+        type="button"
+        class="chat-fab"
+        id="chat-fab"
+        aria-expanded="false"
+        aria-controls="chat-panel"
+        title="Open digital twin chat"
+      >
+        <span class="chat-fab-icon" aria-hidden="true">◇</span>
+        <span class="chat-fab-label">Twin</span>
+      </button>
+      <div
+        class="chat-panel"
+        id="chat-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="chat-panel-title"
+        hidden
+      >
+        <div class="chat-panel-header">
+          <div>
+            <p class="chat-panel-eyebrow">AI · OpenRouter</p>
+            <h2 id="chat-panel-title">Digital twin</h2>
+            <p class="chat-panel-sub">Career Q&amp;A — answers grounded in Mauricio’s profile.</p>
+          </div>
+          <button type="button" class="chat-close" id="chat-close" aria-label="Close chat">
+            ×
+          </button>
+        </div>
+        <div class="chat-messages" id="chat-messages" tabindex="-1"></div>
+        <p class="chat-disclaimer" id="chat-disclaimer">
+          AI can misstate details. For hiring or verification, use the links in the footer.
+        </p>
+        <form class="chat-form" id="chat-form">
+          <label class="visually-hidden" for="chat-input">Your message</label>
+          <textarea
+            id="chat-input"
+            name="message"
+            rows="2"
+            maxlength="2000"
+            placeholder="Ask about my journey, stack, or goals…"
+            required
+          ></textarea>
+          <button type="submit" class="chat-send" id="chat-send">Send</button>
+        </form>
+      </div>
+    </div>
+
     <script src="/js/main.js"></script>
+    <script src="/js/chat.js"></script>
   </body>
 </html>
